@@ -64,7 +64,7 @@ function findTheMax(arr){
             max = a
         }
     }
-    console.log(max)
+    // console.log(max)
     return max
 }
 
@@ -76,3 +76,25 @@ function findTheMax2(arr) {
 }
 
 // console.log(findTheMax2([-5, -7, -1, -9, -2])); 
+
+
+// Check Palindrome
+function checkPalindrome(str) {
+    // console.log(str)
+    let reverseStr = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverseStr += str[i];
+    }
+    const result = reverseStr === str ? "Yes" : "No"
+    console.log(result)
+    return result
+    // if(newStr === str){
+    //     console.log("Yes")
+    // }
+    // if(newStr !== str){
+    //     console.log("No")
+    // }
+  
+  }
+
+  checkPalindrome("adam")
