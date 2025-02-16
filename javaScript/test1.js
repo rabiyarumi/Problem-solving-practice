@@ -30,23 +30,36 @@ reverseString2("hello")
 
 
 //sum of array
-function sumOfArray(){
-    function readLine() {
-        return inputString[currentLine++];
-    }
-    const n = parseInt(readLine().trim(), 10);
-    
-    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
-    
-    console.log(arr)
-
+function sumOfArray(arr){
+    // console.log(arr)
     let sum = 0;
     for(const a of arr){
-        console.log(a)
+        // console.log(a)
         sum = sum + a
     }
-    console.log(sum)
+    // console.log(sum)
     return sum
 }
-sumOfArray("4 6 8 9 5 3 2")
+sumOfArray([6,10,3,6,9,6])
+
+
+// Find the even and odd number
+
+function checkParity(n){
+// console.log(n)
+if(n % 2 === 0 && n >= 0){
+    console.log("Even")
+}
+else if(n % 2 === 1 && n >= 0){
+    console.log("Odd")
+}
+else if(n < 0){
+    console.log("Number is negative")
+}
+
+
+}
+
+checkParity(-999)
+
 
