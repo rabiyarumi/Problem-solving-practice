@@ -55,46 +55,52 @@ function checkParity(n) {
 }
 checkParity(-999);
 
-
-function findTheMax(arr){
-    // console.log(arr)
-    let max = arr[0];
-    for (const a of arr){
-        if(a > max){
-            max = a
-        }
+function findTheMax(arr) {
+  // console.log(arr)
+  let max = arr[0];
+  for (const a of arr) {
+    if (a > max) {
+      max = a;
     }
-    // console.log(max)
-    return max
+  }
+  // console.log(max)
+  return max;
 }
 
-findTheMax([ -5, 0, -1, -9, -2])
-
+findTheMax([-5, 0, -1, -9, -2]);
 
 function findTheMax2(arr) {
-    return Math.max(...arr);
+  return Math.max(...arr);
 }
 
-// console.log(findTheMax2([-5, -7, -1, -9, -2])); 
-
+// console.log(findTheMax2([-5, -7, -1, -9, -2]));
 
 // Check Palindrome
 function checkPalindrome(str) {
-    // console.log(str)
-    let reverseStr = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-      reverseStr += str[i];
-    }
-    const result = reverseStr === str ? "Yes" : "No"
-    console.log(result)
-    return result
-    // if(newStr === str){
-    //     console.log("Yes")
-    // }
-    // if(newStr !== str){
-    //     console.log("No")
-    // }
-  
+  // console.log(str)
+  let reverseStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverseStr += str[i];
   }
+  const result = reverseStr === str ? "Yes" : "No";
+  console.log(result);
+  return result;
+  // if(newStr === str){
+  //     console.log("Yes")
+  // }
+  // if(newStr !== str){
+  //     console.log("No")
+  // }
+}
 
-  checkPalindrome("adam")
+checkPalindrome("adam");
+
+function findPureValue(arr) {
+  console.log("original", arr);
+  const uniqueValue = arr.filter((item, index) => arr.indexOf(item) === index);
+  console.log("after removing all duplicates", uniqueValue)
+  return uniqueValue
+  
+}
+const arr = [4, 5, 6, 7, 5, 6, 4, 5, 6, 2, 1, 9, 7, 0, 1, 3];
+findPureValue(arr);
