@@ -83,7 +83,7 @@ function checkPalindrome(str) {
     reverseStr += str[i];
   }
   const result = reverseStr === str ? "Yes" : "No";
-  console.log(result);
+  // console.log(result);
   return result;
   // if(newStr === str){
   //     console.log("Yes")
@@ -96,11 +96,15 @@ function checkPalindrome(str) {
 checkPalindrome("adam");
 
 function findPureValue(arr) {
-  console.log("original", arr);
+  // console.log("original", arr);
   const uniqueValue = arr.filter((item, index) => arr.indexOf(item) === index);
-  console.log("after removing all duplicates", uniqueValue)
+  // console.log("after removing all duplicates", uniqueValue)
   return uniqueValue
   
 }
 const arr = [4, 5, 6, 7, 5, 6, 4, 5, 6, 2, 1, 9, 7, 0, 1, 3];
 findPureValue(arr);
+
+
+const sum = 3+2+'7'
+console.log(sum)
